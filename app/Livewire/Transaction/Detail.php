@@ -4,7 +4,8 @@ namespace App\Livewire\Transaction;
 
 use App\Models\Sale;
 use Livewire\Component;
-
+use Livewire\Attributes\Title;
+#[Title('Detail Transaksi')]
 class Detail extends Component
 {
     public $sale;

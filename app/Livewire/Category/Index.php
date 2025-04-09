@@ -6,7 +6,8 @@ use Livewire\Component;
 use App\Models\Category;
 use Livewire\WithPagination;
 use Mary\Traits\Toast;
-
+use Livewire\Attributes\Title;
+#[Title('Kategori')]
 class Index extends Component
 {
     use WithPagination;

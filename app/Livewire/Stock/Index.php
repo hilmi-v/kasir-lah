@@ -7,6 +7,8 @@ use App\Models\Product;
 use App\Models\StockLog;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Livewire\Attributes\Title;
+#[Title('Stok')]
 
 class Index extends Component
 {
@@ -30,8 +32,8 @@ class Index extends Component
     {
         return [
             ['key' => 'id', 'label' => '#', 'class' => 'font-bold text-black dark:text-white w-7', 'sortable' => false],
-            ['key' => 'name', 'label' => 'Name', 'class' => "w-40"],
-            ['key' => 'stock', 'label' => 'Stok', 'class' => "w-10"],
+            ['key' => 'name', 'label' => 'Name',],
+            ['key' => 'stock', 'label' => 'Stok', 'class' => 'w-fit'],
         ];
     }
     public function products()

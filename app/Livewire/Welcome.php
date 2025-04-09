@@ -3,13 +3,14 @@
 namespace App\Livewire;
 
 use App\Models\Sale;
+use Livewire\Attributes\Title;
 use Mary\Traits\Toast;
 use App\Models\Product;
 use Livewire\Component;
 use App\Models\Category;
 use App\Models\SaleDetail;
 use Illuminate\Support\Facades\DB;
-
+#[Title('Dashboard')]
 class Welcome extends Component
 {
     use Toast;

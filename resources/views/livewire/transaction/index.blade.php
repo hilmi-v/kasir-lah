@@ -4,7 +4,7 @@
     <x-button icon="bi.plus" class="btn-primary btn-sm mb-4" label="Mulai transaksi"
         link="{{ route('transactions.create') }}" />
     <x-card>
-        <x-table :headers=" $headers" :rows="$sales" with-pagination show-empty-text :sort-by="$sortBy">
+        <x-table :headers=" $headers" :rows="$sales" show-empty-text with-pagination :sort-by="$sortBy">
             @scope('cell_id', $sale, $sales)
             {{ $sales->firstItem() + $loop->index}}
             @endscope

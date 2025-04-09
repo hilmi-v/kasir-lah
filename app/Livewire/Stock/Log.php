@@ -5,7 +5,8 @@ namespace App\Livewire\Stock;
 use App\Models\StockLog;
 use Livewire\Component;
 use Livewire\WithPagination;
-
+use Livewire\Attributes\Title;
+#[Title('Log Stok')]
 class Log extends Component
 {
     use WithPagination;

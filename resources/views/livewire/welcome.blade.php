@@ -6,7 +6,7 @@
         </x-slot:actions>
     </x-header>
 
-    <div class="grid grid-cols-3 gap-4 mb-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <x-stat title="Produk" value="{{ $totalProduct }}" icon="bi.box" color="text-primary" shadow
             description="terjual" />
         <x-stat title="transaksi" value="{{ $totalTransaction }}" icon="bi.cart" color="text-warning" shadow
@@ -16,16 +16,16 @@
     </div>
 
 
-    <div class="grid grid-cols-8 gap-7 justify-center  max-h-1/5 mb-5">
-        <x-card class="col-span-5 h-full " title="penjualan" separator shadow>
+    <div class="grid grid-cols-1 md:grid-cols-8 gap-7 justify-center  max-h-1/5 mb-5">
+        <x-card class="md:col-span-5 h-full " title="penjualan" separator shadow>
             <x-chart wire:model="salesChart" />
         </x-card>
-        <x-card class="col-span-3 h-full" title="kategori" separator shadow>
+        <x-card class="md:col-span-3 h-full justify-center" title="kategori" separator shadow>
             <x-chart wire:model="categoryChart" />
         </x-card>
     </div>
 
-    <div class="grid grid-cols-2 gap-7">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-7">
         <x-card title="Transaksi terakhir">
             <x-slot:menu>
                 <x-button icon-right="bi.arrow-right" link="{{ route('transactions.index') }}"

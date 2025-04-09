@@ -7,6 +7,8 @@ use App\Models\Sale;
 use App\Models\SaleDetail;
 use Livewire\Component;
 use Mary\Traits\Toast;
+use Livewire\Attributes\Title;
+#[Title('Create Transaksi')]
 
 class Create extends Component
 {

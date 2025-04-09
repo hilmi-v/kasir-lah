@@ -6,10 +6,12 @@ use App\Models\Sale;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Mary\Traits\Toast;
-
+use Livewire\Attributes\Title;
+#[Title('Transaksi')]
 class Index extends Component
 {
     use WithPagination;
+
 
     public array $sortBy = ['column' => 'created_at', 'direction' => 'desc'];
     public function sales()

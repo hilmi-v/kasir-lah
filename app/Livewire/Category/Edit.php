@@ -5,7 +5,8 @@ namespace App\Livewire\Category;
 use App\Models\Category;
 use Livewire\Component;
 use Mary\Traits\Toast;
-
+use Livewire\Attributes\Title;
+#[Title('Edit Transaksi')]
 class Edit extends Component
 {
     use Toast;

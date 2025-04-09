@@ -6,7 +6,8 @@ use Mary\Traits\Toast;
 use App\Models\Product;
 use Livewire\Component;
 use Livewire\WithPagination;
-
+use Livewire\Attributes\Title;
+#[Title('Produk')]
 class Index extends Component
 {
     use WithPagination;

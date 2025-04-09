@@ -6,8 +6,8 @@
     </x-header>
     <x-button class="btn-sm btn-neutral mb-4" icon="bi.arrow-left" label="kembali"
         link="{{ route('transactions.index') }}" />
-    <div class="grid grid-cols-12 gap-7">
-        <x-card class="col-span-8 row-span-7">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-7">
+        <x-card class="md:col-span-8 col-span-1 md:row-span-7 row-span-1">
             <x-form wire:submit='addCart'>
                 <x-choices-offline wire:model="selected" :options="$products" placeholder="cari produk" single
                     searchable icon="bi.box" class="mb-5" required>
@@ -41,11 +41,11 @@
                 @endscope
             </x-table>
         </x-card>
-        <x-card class="col-span-4 " title="Total transaksi">
+        <x-card class="md:col-span-4 col-span-1 " title="Total transaksi">
             {{ Number::currency($original_total, 'IDR', 'id-ID',0 ) }}
         </x-card>
 
-        <x-button class="col-start-9 col-end-13 mt-5 btn-accent" label="bayar" @click="$wire.startPayment"
+        <x-button class="md:col-start-9 md:col-end-13 mt-5 btn-accent" label="bayar" @click="$wire.startPayment"
             x-bind:disabled="$wire.cart.length == 0" />
     </div>
     <x-modal wire:model="modal" title="Konfirmasi Transaksi" separator>

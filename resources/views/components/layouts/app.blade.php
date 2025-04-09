@@ -14,6 +14,7 @@
     <script>
         flatpickr.localize(flatpickr.l10ns.id);
     </script>
+    <link rel="icon" type="image/x-icon" href="{{ asset('logo.svg') }}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -31,6 +32,8 @@
             </label>
         </x-slot:actions>
     </x-nav>
+
+
 
     {{-- MAIN --}}
     <x-main>
@@ -52,7 +55,8 @@
                 <x-menu-item title="Laporan" icon="bi.file-earmark-arrow-down" link="{{ route('report') }}"
                     class="py-3 my-1" />
 
-                <x-menu-sub title="Settings" icon="o-cog-6-tooth" class="py-4 my-2">
+                <x-menu-sub title="Settings" icon="o-cog-6-tooth" class="py-3 my-2">
+                    <x-menu-item title="Profile" icon="o-user" link="{{ route('profile') }}" />
                     <x-menu-item title="Theme" icon="o-swatch" @click="$dispatch('mary-toggle-theme')" />
                     <x-menu-item title="Logout" icon="o-power" link="{{ route('logout') }}" />
                     <x-theme-toggle class="hidden" />

@@ -17,7 +17,7 @@
             @endscope
             @scope('actions', $product)
             <div class="flex mb-2 space-x-2">
-                <x-button class="btn-warning btn-sm text-white" label="tambah stock"
+                <x-button class="btn-warning btn-sm text-white" label="stock"
                     @click="$wire.modal = true; id = {{ $product->id }}; stock = {{ $product->stock }}" spinner />
             </div>
             @endscope
@@ -33,7 +33,7 @@
             </x-slot:prefix>
         </x-input>
         <x-slot:actions>
-            <x-button label="Simpan" class="btn-primary btn-sm" @click="$wire.update(id); id = null;" />
+            <x-button label="Simpan" class="btn-primary btn-sm justify-center" @click="$wire.update(id); id = null;" />
         </x-slot:actions>
     </x-modal>
 </div>

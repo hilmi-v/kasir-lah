@@ -6,7 +6,8 @@ use Mary\Traits\Toast;
 use App\Models\Product;
 use Livewire\Component;
 use App\Models\Category;
-
+use Livewire\Attributes\Title;
+#[Title('Edit Produk')]
 class Edit extends Component
 {
     use Toast;

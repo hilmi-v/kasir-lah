@@ -28,7 +28,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/transactions/detail/{id}', App\Livewire\Transaction\Detail::class)->name('transactions.detail');
 
     Route::get('/report', App\Livewire\Report::class)->name('report');
+
+    Route::get('/profile', App\Livewire\Profile::class)->name('profile');
 });
 
 Route::get('/logout', [App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
 Route::get('/login', App\Livewire\Login::class)->middleware('guest')->name('login');
+Route::get('/forgot-password', App\Livewire\Auth\ForgotPassword::class)->name('forgot.password');
+Route::get('/reset-password/{token}', App\Livewire\Auth\ResetPassword::class)->name('password.reset');
+
